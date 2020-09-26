@@ -1,0 +1,5 @@
+program1.txt;D:/Praca/cpp/testy_klasy/projekt_klasy/kolejny_built_projekt_klasy/stworzone
+program2.txt;D:/Praca/cpp/testy_klasy/projekt_klasy/kolejny_built_projekt_klasy/stworzone2
+rysunek.jpg;D:/Praca/cpp/testy_klasy/projekt_klasy/kolejny_built_projekt_klasy/stworzone
+srysunek.jpg;D:/Praca/cpp/testy_klasy/projekt_klasy/kolejny_built_projekt_klasy/stworzone
+2rysunek.jpg;D:/Praca/cpp/testy_klasy/projekt_klasy/kolejny_built_projekt_klasy/stworzone2
