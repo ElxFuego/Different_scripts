@@ -235,7 +235,7 @@ int yesno()
 	else if(x == 'N')
 		return 0;
 	else{
-	 	std::cout<<"Coœ sie zepsulo!!"<<std::endl;
+	 	std::cout<<"CoÅ“ sie zepsulo!!"<<std::endl;
 	 	return -1;
 	}
 	
