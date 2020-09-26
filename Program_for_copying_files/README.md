@@ -11,6 +11,7 @@ I also used it to learn, so it was gradually changing- I have added classes inst
 It simply requires fnames.txt file in which you put your file name and target directory, seperated by ";". Its syntax is:
 
 FILENAME1 ; C:/DIR1/DIR2
+
 FILENAME2 ; D:/DIR2/DIR2
 
 Originally I had files and its target directory in excell file, so it was easy to generate .csv from it. You can also create via program "SettingsFile" which will store source directory of files as well as directory of fnames.txt
