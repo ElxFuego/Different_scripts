@@ -13,7 +13,7 @@ int FileSave(std::vector<char> text) {
 	
 	if(file.is_open())
 	{		
-		//wypisywanie do pliku tych hase³
+		//wypisywanie do pliku tych haseÂ³
 		for(auto a : text)
 			file<<a;
 		
