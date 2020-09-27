@@ -64,7 +64,7 @@ int main(int argc, char** argv) {
 				do{				
 					std::cin>>no_passwords;				
 				}
-			    while(!InputChecker("\nNot a number. Enter value one more time"));
+			   	while(!InputChecker("\nNot a number. Enter value one more time"));
 				
 				system("cls");
 				menu();
@@ -73,7 +73,7 @@ int main(int argc, char** argv) {
 				do{				
 					std::cin>>overal_no_char;	
 				}
-			    while(!InputChecker("\nNot a number. Enter value one more time"));
+			    	while(!InputChecker("\nNot a number. Enter value one more time"));
 				
 				
 				system("cls");
@@ -119,69 +119,62 @@ int main(int argc, char** argv) {
 					
 					
 					for(int j = 0; j < overal_no_char; j++)
-		     		{
-		     			choice = (rand()%4);
-		     							
-			     			if((up_char ==1) && (choice == 1) && (up_char_status == true))
-			     			{		     				
-			     				password_char = lettersC_tab[rand() % (sizeof(lettersC_tab)/sizeof(*lettersC_tab)-1)];	
-								std::cout<<password_char;
-								up_char_count++;						   				
-							}
-					
-					
-							else if((special_char ==1) && (choice == 2) && (special_char_status == true))
-			     			{		     				
-			     				password_char = special_tab[rand() % 8];
-								std::cout<<password_char;
-								special_char_count++;	     				
-							}
-							
-						
-							else if((number_char ==1) && (choice == 3) && (number_char_status == true))
-			     			{		     				
-			     				 password_char = number_tab[rand() % 10];
-								 std::cout<<password_char;
-								 number_char_count++;										     				
-							}
-							else if((choice == 0) && (lo_char_status == true))
-							{						
-								password_char = letters_tab[rand() % (sizeof(letters_tab)/sizeof(*letters_tab)-1)];
-								std::cout<<password_char;
-								lo_char_count++;
-							}
-							else
-							{
-							
-							 j--;
-							 continue;
-							}
-				
-							
-							if((overal_no_char -j -1 )< 4)
-							{
-								
-								if(up_char_count > 0 || up_char == 0)
-									up_char_status = false;
-								if(special_char_count >0 || special_char == 0)
-									special_char_status = false;
-								//	std::cout<<"gowno special"<<std::endl;
-								if(number_char_count > 0 || number_char == 0)
-									number_char_status = false;
-								//	std::cout<<"gowno number"<<std::endl;
-								if(lo_char_count > 0)
-								//	std::cout<<"gowno lochar"<<std::endl;
+					{
+						choice = (rand()%4);
+
+						if((up_char ==1) && (choice == 1) && (up_char_status == true))
+						{		     				
+							password_char = lettersC_tab[rand() % (sizeof(lettersC_tab)/sizeof(*lettersC_tab)-1)];	
+							std::cout<<password_char;
+							up_char_count++;						   				
+						}
+						else if((special_char ==1) && (choice == 2) && (special_char_status == true))
+						{		     				
+							password_char = special_tab[rand() % 8];
+							std::cout<<password_char;
+							special_char_count++;	     				
+						}	
+						else if((number_char ==1) && (choice == 3) && (number_char_status == true))
+						{		     				
+							 password_char = number_tab[rand() % 10];
+							 std::cout<<password_char;
+							 number_char_count++;										     				
+						}
+						else if((choice == 0) && (lo_char_status == true))
+						{						
+							password_char = letters_tab[rand() % (sizeof(letters_tab)/sizeof(*letters_tab)-1)];
+							std::cout<<password_char;
+							lo_char_count++;
+						}
+						else
+						{
+
+							j--;
+							continue;
+						}
+
+
+						if((overal_no_char -j -1 )< 4)
+						{
+
+							if(up_char_count > 0 || up_char == 0)
+								up_char_status = false;
+							if(special_char_count >0 || special_char == 0)
+								special_char_status = false;
+							if(number_char_count > 0 || number_char == 0)
+								number_char_status = false;
+							if(lo_char_count > 0)
 								lo_char_status = false;
-								if(up_char_status ==false && special_char_status ==false && number_char_status ==false && lo_char_status  ==false)
+							if(up_char_status ==false && special_char_status ==false && number_char_status ==false && lo_char_status  ==false)
 								lo_char_status = true;	
-							}
-							
+						}
+
 						passwords_txt.push_back(password_char);										 
-			     	}
+					}
 	     	
-			    	std::cout<<std::endl;
+					std::cout<<std::endl;
 					passwords_txt.push_back('\n');	 
-		    	}
+		    		}
 		    	
 				FileSave(passwords_txt);
 				
@@ -246,11 +239,11 @@ bool InputChecker(std::string message)
 		if(std::cin.rdstate())
 		{
 			std::cin.clear();
-	        std::cin.ignore(1024, '\n');
+	       		std::cin.ignore(1024, '\n');
 			system("cls");
 			menu();	
-	        std::cout<<message<<std::endl;
-	        return false;
+	        	std::cout<<message<<std::endl;
+	        	return false;
 		}
 		else	
 			return true;		
